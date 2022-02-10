@@ -1,8 +1,10 @@
+# **IBAN Validator**
+
 This application builds a Restful endpoint to validate an IBAN number.
 
 The end point designed is as below-
 
-- GET- <server-url>/v1/iban/{ibanId}/validate
+- **GET- {server-url}/v1/iban/{ibanId}/validate**
 
 The application is build on Java 11 using 
 - SpringBoot 2.6
