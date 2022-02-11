@@ -21,7 +21,7 @@ public class IbanController {
     IbanValidatorService ibanValidatorService;
 
     @GetMapping(produces = "application/json", value = "/{ibanId}/validate")
-    public ResponseEntity<IbanValidatorResponse> getBusinessHours(@PathVariable String ibanId) {
+    public ResponseEntity<IbanValidatorResponse> validateIbanId(@PathVariable String ibanId) {
         IbanValidatorResponse ibanValidatorResponse = ibanValidatorService.validate(ibanId);
         log.debug("response: ibanValidatorResponse(): {}", ibanValidatorResponse);
         return ResponseEntity.ok().body(ibanValidatorResponse);
